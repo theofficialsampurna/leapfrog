@@ -1,0 +1,26 @@
+.banner-wrapper {
+    height: 350px;
+    margin: 0 auto;
+    width: 1190px;
+}
+.banner {
+    height: 340px;
+    width: 270px;
+    float: left;
+    position: relative;
+
+}
+.banner-image {
+    background-image: url('../images/banner-inactive.png');
+    background-repeat: no-repeat;
+    height: 314px;
+}
+.banner-btn {
+    background-image: url(../images/banner-btn-inactive.png);
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 200px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
