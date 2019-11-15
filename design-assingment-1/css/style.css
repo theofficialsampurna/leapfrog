@@ -1,0 +1,127 @@
+.tollens-wrapper {
+    font-family: Arial;
+}
+.menu-nav ul {
+    list-style: none;
+    
+}
+.menu-nav ul li {
+    font-size: 14px;
+    display: inline-block;
+    /* line-height: 36px; */
+    height: 33px;
+    padding-left:15px;
+    padding-right: 20px;
+}
+.menu-nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+.menu-nav ul li:hover {
+    background-image: url("../images/menu-hover.png");
+    background-repeat: no-repeat;
+}
+.menu-nav ul li:hover img {
+    display: inline-block;
+}
+.breadcrumb ul li {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 5px;
+    color: #75817f;
+}
+.breadcrumb ul li+li {
+    background-image: url(../images/pipe-li.png);
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+}
+/* .first-row {
+    background-color: #f3f3f3;;
+} */
+.top-row-wrapper h2 {
+    font-size: 30px;
+    color: red;
+    margin-bottom: 15px;
+}
+.top-row-wrapper p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 22px;
+}
+.col3-left h3 {
+    margin-bottom: 27px;
+}
+.col3-left ul {
+    list-style: none;
+}
+.col3-left ul li {
+    font-size: 13px;
+    line-height: 26px;
+}
+.col3-left ul li img{
+    padding-top: 5px;
+    padding-right: 5px;
+}
+.col3-main span{
+    font-size: 13px;
+    line-height: 24px;
+}
+.suspendisse {
+    background-image: url(../images/suspendisse-arc.png);
+    background-repeat: no-repeat;
+}
+.arc-wrapper span {
+    font-size: 18px;
+    padding-top: 25px;
+}
+.maecenas {
+    background-image: url(../images/maecenas-arc.png);
+    background-repeat: no-repeat;
+}
+.aliquam {
+    background-image: url(../images/aliquam-arc.png);
+    background-repeat: no-repeat;
+}
+.habitasse {
+    background-image: url(../images/habitasse-arc.png);
+    background-repeat: no-repeat;
+}
+.digit {
+    font-weight: bolder;
+    font-size: 30px;
+}
+.comment-box {
+    background-color: white;
+    margin-bottom: 30px;
+}
+.col3-r h3{
+    margin-bottom: 30px;
+}
+.third-row-top {
+    text-align: center;
+    padding: 0 90px;
+    margin-bottom: 50px;
+}
+.third-row-top h1 {
+    font-weight: normal;
+    color: red;
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+.third-row-top span {
+    font-size: 12px;
+}
+.scroll-icons ul {
+    list-style: none;
+}
+.scroll-icons ul li {
+    display: inline;
+    padding: 50px 30px 25px 30px;
+    background-color: white;
+    margin: 0 9px;
+}
+/* .scroll-left :hover{
+    opacity: 1;
+} */

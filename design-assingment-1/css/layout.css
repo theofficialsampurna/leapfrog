@@ -1,0 +1,118 @@
+.header-top {
+    padding-left: 172px;
+    padding-top: 22px;
+    padding-right: 575px;
+    height: 58px;
+    background-color: 76c7c1;
+    background-image: url("../images/ruler-header.png");
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+}
+.icon-wrapper {
+    float: left;
+}
+.menu-nav-wrapper {
+    float: right;
+}
+.hoverable-menu {
+   line-height: 36px;
+}
+.hoverable-menu img {
+    display: none;
+}
+.header-bottom {
+    height: 48px;
+    padding-top: 32px;
+    background-color: #ececec;
+    padding-left: 172px;
+    padding-right: 543px;
+}
+.title-wrapper {
+    float: left;
+    font-size: 19px;
+    color: #75817f;
+}
+.breadcrumb-wrapper {
+    float: right;
+    margin-right: 25px;
+}
+/* .container-wrapper {
+    padding-right: 600px;
+} */
+.first-row {
+    padding-right: 600px;
+}
+.top-row-wrapper {
+    padding-left: 165px;
+    padding-top: 50px;
+    margin-bottom: 65px;
+}
+.col3-left {
+    float: left;
+    padding-left: 163px;
+    width: 20%;
+}
+.main-container-wrapper {
+    float: right;
+    width: 67%;
+}
+.col3-main {
+    float: left;
+    width: 62%;
+    padding-left: 50px;
+}
+.col3-r {
+    float: right;
+    width: 29%;
+    padding-left: 15px;
+}
+.suspendisse, .maecenas, .aliquam, .habitasse {
+    margin-top: 55px;
+    padding-top: 30px;;
+    float: left;
+    width: 15%;
+    padding-left: 15px;
+    padding-right: 35px;
+    text-align: center;
+}
+.second-row {
+    margin-top: 340px;
+    height: 500px;
+    background-color: #ececec;
+}
+.third-row {
+    margin-top: 109px;
+    padding-left: 165px;
+    padding-right: 575px;
+    background-color: #f3f3f3;
+    padding-bottom: 98px;
+}
+.scroller-button-wrapper {
+    height: 40px;
+    margin-bottom:20px;
+}
+.scroller-text {
+    float: left;
+    padding-top: 10px;
+}
+.scroller-button {
+    float: right;
+}
+.scroll-left {
+    float: left;
+    margin-right: 12px;
+    background-image: url(../images/left-active.png);
+}
+.scroll-right {
+    float: right;
+}
+.scroller-icon-wrapper {
+    margin-top: 70px;
+}
+.fourth-row {
+    height: 300px;
+    background-color: #76c7c1;
+    background-image: url("../images/ruler-footer.png");
+    background-repeat: repeat-x;
+    background-position-y: top;
+}
