@@ -1,0 +1,150 @@
+.tollens-wrapper {
+    width: 100%;
+}
+.center-content {
+    width: 1170px;
+    margin: 0 auto;
+}
+.overflow-header-top, .overflow-header-bottom{
+    width: 100%;
+}
+.header-top {
+    height: 80px;
+}
+.icon-wrapper {
+    float: left;
+    padding-top: 21px;
+    padding-left: 7px;
+}
+.menu-nav-wrapper {
+    float: right;
+    padding-top: 25px;
+}
+.header-bottom {
+    height: 80px;
+}
+.title-wrapper {
+    float: left;
+}
+.breadcrumb-wrapper {
+    float: right;
+}
+.overflow-container {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+.first-row-top-wrapper {
+    padding-top: 52px;
+    margin-bottom: 50px;
+}
+.first-row-bottom {
+    height: 268px;
+    padding-top: 20px;
+}
+.col3-left {
+    float: left;
+    width: 275px;
+}
+.col3-left-list-wrapper {
+    padding: 5px 0 0 19px;
+}
+.main-container-wrapper {
+    float: right;
+    width: 895px;
+}
+.col3-main {
+    float: left;
+    width: 605px;
+}
+.col3-r {
+    float: right;
+    width: 290px;
+}
+.banner-wrapper {
+    height: 350px;
+}
+.banner {
+    height: 340px;
+    width: 270px;
+    float: left;
+    position: relative;
+    margin: 0 10px;
+}
+.overflow-second-row {
+    width: 100%;
+    background-image: url(../images/background-color.png);
+    background-repeat: repeat-x;
+    background-position-y: top;
+    height: 555px;
+}
+.third-row {
+    height: 437px;
+}
+.scroller-button-wrapper {
+    height: 50px;
+}
+.scroller-text {
+    float: left;
+}
+.scroll-line {
+    float: left;
+    background-image: url(../images/scroller-line.png);
+    background-repeat: no-repeat;
+    width: 888px;
+    height: 9px;
+    margin: 16px 0 0 10px;
+}
+.scroller-button {
+    float: right;
+}
+.scroll-left {
+    float: left;
+    background-image: url(../images/left-inactive.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 43px;
+    cursor: pointer;
+}
+.scroll-right {
+    float: right;
+    margin: 1px 5px 0 18px;
+    background-image: url(../images/right-inactive.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.scroller-icon-wrapper {
+    margin: 32px 0 0 0;
+}
+.overflow-fourth-row {
+    width: 100%;
+    background-color: #76c7c1;
+    background-image: url(../images/ruler-footer.png);
+    background-repeat: repeat-x;
+    background-position-y: top;
+    height: 300px;
+}
+.fourth-col1, .fourth-col2, .fourth-col3, .fourth-col4 {
+    float: left;
+}
+.fourth-col1{
+    width: 370px;
+}
+.fourth-col2, .fourth-col3 {
+    width: 190px;
+}
+.fourth-col4{
+    width: 410px;
+}
+.overflow-footer {
+    width: 100%;
+    background-color: #6bb4ad;
+    height: 50px;
+}
+.footer-text {
+    float: left;
+}
+.footer-icon-wrapper {
+    float: right;
+}
