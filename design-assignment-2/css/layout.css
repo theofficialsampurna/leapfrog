@@ -1,0 +1,49 @@
+.settings-wrapper {
+    width: 100%;
+}
+/* .center-content {
+    width: 73.375em;
+    margin: 0 auto;
+} */
+.overflow-header-top, .overflow-header-bottom{
+    width: 100%;
+}
+.header-top {
+    height: 80px;
+}
+.icon-wrapper {
+    float: none;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    /* padding-top: 21px;
+    padding-left: 7px; */
+}
+.burger-icon-wrapper {
+    width: 12%;
+    height: 35%;
+    margin: 0 auto;
+    float: left;
+}
+.menu-nav-wrapper {
+    float: none;
+    /* padding-top: 25px; */
+}
+.menu-nav-desktop {
+    display: none;
+}
+.overflow-header-bottom {
+    display: none;
+}
+.header-bottom {
+    height: 5em;
+}
+.title-wrapper {
+    float: left;
+}
+.breadcrumb-wrapper {
+    float: right;
+}
+.overflow-body {
+    width: 100%;
+}
