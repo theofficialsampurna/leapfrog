@@ -175,7 +175,7 @@
         height: 50%;
         background-size: 100% 90%;
     }
-    .sidebar-slideshow {
+    .sidebar-wrapper {
        display: none;
     }
 }
@@ -227,6 +227,10 @@
         width: 73.375em;
         margin: 0 auto;
     }
+    .first-row-bottom {
+        width:73.375em;
+        height: 35.6875em;
+    }
     .slideshow-wrapper {
         background-image: url(../images/slideshow-img.png);
         height: 47.8125em;
@@ -236,6 +240,22 @@
         padding: 17.5em 0 0 0;
     }
     .slideshow-text {
-        padding: 33.75em 0 0 0;
+        padding: 25em 0 0 0;
     }
+    .slideshow-secondary {
+        float: left;
+        width: 54.5625em;
+        height: 35.6875em;
+    }
+    .sidebar-wrapper {
+        display: block;
+        float: right;
+        width: 18.8125em;
+    }
+    .sidebar-slideshow {
+        float: right;
+        display: block;
+        height: 15.625em;
+        width: 100%;
+     }
 }
