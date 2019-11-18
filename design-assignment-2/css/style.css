@@ -257,5 +257,7 @@
         display: block;
         height: 15.625em;
         width: 100%;
+        background-image: url(../images/slideshow-img-mobile.png);
+        background-repeat: no-repeat;
      }
 }
