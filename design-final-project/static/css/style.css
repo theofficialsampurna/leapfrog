@@ -427,3 +427,78 @@ nav a {
     margin: 0;
     padding: 50px 60px;
 }
+.tenth-title {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;  
+    padding: 110px 0 0 0;
+}
+.tenth-subtext {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px 0 45px 0;
+}
+.tenth-header, .tenth-platinum-sponsors, .info-wrapper {
+    border-bottom: 1px solid rgba(233, 233, 233, 1);
+}
+.sponsors-title {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px 0 25px 0;
+}
+.sponsors-logo-wrapper {
+    text-align: center;
+}
+.sponsor-logo {
+    height: 135px;
+    display: inline-block;
+    padding: 0 20px;
+}
+.tenth-media-sponsors {
+    padding-bottom: 60px;
+}
+.eleventh-info-wrapper {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);  
+    width: 369px;
+    height: 430px;
+}
+.location-wrapper {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: left;
+    padding: 55px 0 0 60px;    
+}
+.info {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    padding: 15px 0; 
+}
+.info figure{
+    display: inline;
+}
+.info-wrapper {
+    padding:  0 55px;
+}
+.media-logo-wrapper figure {
+    display: inline;
+}
+.media-logo-wrapper a {
+    text-decoration: none;
+}
+.media-logo-wrapper {
+    padding: 0 0 0 0;
+}
+.get-updates {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 0 0;      
+}
