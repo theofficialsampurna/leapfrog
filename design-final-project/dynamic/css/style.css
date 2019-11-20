@@ -676,7 +676,24 @@ nav a:hover {
     width: 128px;
     margin: 0 auto;
 }
-
+.hamburger-wrapper {
+    width: 50px;
+    display: none;
+}
+.hamburger-wrapper ul {
+    list-style: none;
+    display: none;
+}
+.hamburger-wrapper ul li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.hamburger-wrapper:hover ul{
+    display: block;
+}
+/* for ipad */
 @media only screen and (max-width: 768px) {
 
     .col3-left {
@@ -759,5 +776,122 @@ nav a:hover {
     }
     .thirteenth-col2 {
         padding: 0px 75px;
+    }
+}
+
+/* for samsung galaxy s5 */
+@media only screen and (max-width: 768px) {
+    .col3-left {
+        padding-left: 25px;
+    }
+    nav {
+        display: none;
+    }
+    .hamburger-wrapper {
+        display: block;
+        float: left;
+        padding-top: 86px;
+    }
+    .btn-ticket {
+        margin-right: 40px;
+        margin-top: 35px;
+    }
+    .header-title {
+        padding-top: 10px;
+    }
+    .counter-wrapper {
+        width: 100%;
+    }
+    .counter {
+        margin: 50px 0 30px 20px;
+    }
+    .header-btn-wrapper {
+        padding-left: 60px;
+    }
+    .btn-ticket-2 {
+        margin-left: -35px;
+        margin-top: 20px;
+    }
+    .second-text-area p {
+        margin: 20px 20px;
+    }
+    .second-btn-wrapper {
+        padding: 0px 0 0 65px;
+    }
+    .btn-attend {       
+        margin: 10px 15px;
+    }
+    .data-wrapper {
+        padding-left: 50px;
+        padding-top: 0px;
+    }
+    .fourth-gallery, .seventh-gallery {
+        padding-left: 0px;
+        margin-left: -10px;
+    }
+    .gallery-profile {
+        width: 22em;
+    }
+    .event-day-wrapper {
+        padding: 48px 0 0 0;
+    }
+    .event-day {
+        padding: 0px 12px;
+    }
+    .auditorium span {
+        padding: 15px 10px;
+    }
+    .event-wrapper {
+        padding-top: 30px;
+        text-align: center;
+    }
+    .comments-wrapper {
+        padding-left: 0;
+    }
+    .comment-box {
+        width: 19em;
+    }
+    .comment-dp {
+        position: absolute;
+        left: 120px;
+        top: 10px;
+    }
+    .comment-wrapper {
+        margin: 5px 25px;
+    }
+    .eighth-row-wrapper {
+        padding-bottom: 50px;
+    }
+    .ninth-text {
+        padding: 75px 0 0 0;
+    }
+    .ninth-counter-wrapper {
+        padding-left: 0px;
+    }
+    .ninth-counter {
+        margin: 60px 0 0 20px;
+    }
+    .ninth-btn-wrapper {
+        padding-left: 58px;
+    }
+    .eleventh-row-wrapper {
+        padding: 120px 2px;
+    }
+    .eleventh-info-wrapper {
+        width: 19em;
+        margin: 0 30px;
+    }
+    .twelvth-row-contents {
+        padding-left: 62px;
+    }
+    .input-wrapper {
+        margin-top: 15px;
+        margin-left: -35px;
+    }
+    .thirteenth-col1, .thirteenth-col3 {
+        width: 100%;
+    }
+    .thirteenth-col2 {
+        display: none;
     }
 }
