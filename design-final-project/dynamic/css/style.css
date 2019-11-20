@@ -165,7 +165,7 @@ nav a {
     padding-top: 124px;
 }
 .gallery-profile {
-    width: 25.6944%;
+    width: 23.125em;
     position: relative;
     margin: 15px;
     float: left;
@@ -409,12 +409,14 @@ nav a {
     text-align: center;
     padding: 120px 0 0 0;
 }
-.ninth-counter-wrapper, .ninth-btn-wrapper {
+.ninth-btn-wrapper {
     text-align: center;
 }
 .ninth-counter {
-    margin: 0;
-    padding: 50px 60px;
+    float: left;
+    margin: 60px 0 0 85px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 .tenth-title {
     font-size: 40px;
@@ -452,7 +454,7 @@ nav a {
 .eleventh-info-wrapper {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);  
-    width: 25.625%;
+    width: 23.0625em;
     margin: 0 185px;
     padding-bottom: 50px;
 }
@@ -540,7 +542,7 @@ nav a {
 }
 .thirteenth-col1, .thirteenth-col3 {
     float: left;
-    width: 415px;
+    width: 28.8194%;
 }
 .thirteenth-col1-title {
     font-size: 22px;
@@ -574,7 +576,7 @@ nav a {
 }
 .thirteenth-col2 {
     float: left;
-    width: 170px;
+    width: 11.8055%;
     padding: 0 100px;
 }
 .thirteenth-col2-links {
@@ -638,10 +640,10 @@ nav a {
 }
 .gallery-image {
     float: left;
-    padding: 10px 10px;
+    padding: 10px 5px;
 }
 .twelvth-row-contents {
-    padding-left: 625px;
+    padding-left: 425px;
 }
 
 /* fix end */
@@ -673,4 +675,89 @@ nav a:hover {
 .calender-wrapper {
     width: 128px;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .col3-left {
+        padding-left: 235px;
+    }
+    nav {
+        margin-top: 50px;
+    }
+    .btn-ticket {
+        margin-right: 250px;
+    }
+    .header-title {
+        padding-top: 50px;
+    }
+    .counter-wrapper {
+        width: 80%;
+    }
+    .counter {
+        margin: 50px 0 30px 70px;
+    }
+    .header-btn-wrapper {
+        padding-left: 80px;
+    }
+    .second-text-area {
+        padding: 70px 0 0 0;
+    }
+    .second-text-area p {
+        margin: 20px 40px;
+    }
+    .second-btn-wrapper {
+        padding: 0 0 0 145px;
+        margin-bottom: 70px;
+    }
+    .data-wrapper {
+        padding-left: 100px;
+    }
+    .fourth-row-wrapper {
+        margin-top: 0;
+    }
+    .fourth-gallery {
+        padding-left: 182px;
+    }
+    .event-day-wrapper {
+        padding: 48px 0 0 100px;
+    }
+    .event-wrapper {
+        width: 75%;
+        padding-top: 0px;
+    }
+    .seventh-title {
+        padding: 70px 0 30px 0;
+    }
+    .seventh-gallery {
+        padding-left: 182px;
+    }
+    .eighth-title {
+        padding-top: 80px;
+    }
+    .comments-wrapper {
+        padding-left: 124px;
+        padding-top: 25px;
+    }
+    .ninth-counter-wrapper {
+        padding-left: 48px;
+    }
+    .ninth-btn-wrapper {
+        padding-left: 186px;
+    }
+    .tenth-title {
+        padding: 70px 0 0 0;
+    }
+    .eleventh-row-wrapper {
+        padding: 135px 20px;
+    }
+    .twelvth-row-contents {
+        padding-left: 125px;
+    }
+    .thirteenth-col-wrapper {
+        padding: 75px 0 80px 55px;
+    }
+    .thirteenth-col2 {
+        padding: 0px 75px;
+    }
 }

@@ -41,7 +41,7 @@ nav {
 }
 .counter {
     float: left;
-    margin: 60px 0 0 85px;
+    margin: 60px 28px 40px 85px; 
     text-align: center;
 }
 .header-buttons-row {
