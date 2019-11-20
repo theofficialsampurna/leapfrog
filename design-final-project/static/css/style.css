@@ -466,7 +466,11 @@ nav a {
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);  
     width: 369px;
     height: 430px;
+    margin: 0 185px;
 }
+.eleventh-row-wrapper {
+    padding-top: 135px;
+} 
 .location-wrapper {
     font-size: 40px;
     font-family: "Playfair Display", serif;
@@ -491,14 +495,130 @@ nav a {
 }
 .media-logo-wrapper a {
     text-decoration: none;
+    padding: 0 16px;
 }
 .media-logo-wrapper {
-    padding: 0 0 0 0;
+    padding: 34px 0 0 0;
+    text-align: center;
 }
 .get-updates {
     font-size: 40px;
     font-family: "Playfair Display", serif;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    padding: 0 0;      
+    display: inline-block;    
 }
+.input-wrapper {
+    display: inline-block;
+    border: 1px solid white;
+    height: 60px;
+    border-radius: 30px;
+    text-align: center;
+    margin-left: 40px;
+}
+.input-wrapper input {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 16px 20px 20px 20px;
+}
+.input-wrapper input::placeholder {
+    color: white;
+}
+.input-wrapper figure{
+    display: inline;
+}
+.input-wrapper img {
+    padding: 0 22px 0 0;
+}
+.input-wrapper input:focus {
+    outline: none;
+}
+.twelvth-row-wrapper {
+    padding: 70px 0px;
+    text-align: center;
+} 
+.thirteenth-col-wrapper {
+    padding: 110px 0;
+}
+.thirteenth-row-wrapper {
+    text-align: center;
+}
+.thirteenth-col1, .thirteenth-col3 {
+    display: inline-block;
+    width: 415px;
+}
+.thirteenth-col1-title {
+    font-size: 22px;
+    font-family: "Playfair Display", serif;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    text-align: left;
+    padding: 0 0;
+}
+.thirteenth-col1-text {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(206, 206, 206, 1);
+    line-height: 1.5;
+    text-align: left;
+    padding: 20px 0 30px 0;
+}
+.footer-logo-wrapper figure {
+    display: inline;
+}
+.footer-logo-wrapper a {
+    text-decoration: none;
+    padding: 0 10px 0 0;
+}
+.footer-logo-wrapper {
+    text-align: left;
+    padding: 0 0 0 0;
+}
+.thirteenth-col2 {
+    display: inline-block;
+    width: 170px;
+    padding: 0 100px;
+}
+.thirteenth-col2-links {
+    padding: 25px 0 0 0;
+}
+.thirteenth-col2-links ul {
+    list-style: none;
+}
+.thirteenth-col2-links ul li {
+    text-align: left;
+}
+.thirteenth-col2-links ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.702);
+    line-height: 35px;
+    padding: 0 0;
+}
+.thirteenth-gallery figure {
+    display: inline-block;
+}
+.footer-wrapper {
+    padding: 40px 0;
+}
+.footer-text {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(206, 206, 206, 1);
+    text-align: center;
+    padding: 0 0px;
+}
+.footer-text figure {
+    display: inline-block;
+    padding: 0 0px;
+}
+.footer-text span {
+    text-decoration: underline;
+}
+
+
