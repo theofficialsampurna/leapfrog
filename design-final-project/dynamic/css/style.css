@@ -693,6 +693,7 @@ nav a:hover {
 .hamburger-wrapper:hover ul{
     display: block;
 }
+
 /* for ipad */
 @media only screen and (max-width: 768px) {
 
@@ -780,7 +781,7 @@ nav a:hover {
 }
 
 /* for samsung galaxy s5 */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 360px) {
     .col3-left {
         padding-left: 25px;
     }
