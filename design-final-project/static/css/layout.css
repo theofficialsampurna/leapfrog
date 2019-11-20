@@ -5,6 +5,14 @@
     width: 90em;
     margin: 0 auto;
 }
+.clearfix:before,
+.clearfix:after {
+   content: "";
+   display: table;
+}
+.clearfix:after {
+   clear: both;
+}
 .overflow-video {
     min-width: 1440px;
     background-image: url(../images/video-thumbnail.png);
@@ -37,7 +45,7 @@ nav {
     margin-top: 50px;
 }
 .counter {
-    display: inline-block;
+    float: left;
     margin: 60px 0 0 100px;
     text-align: center;
 }

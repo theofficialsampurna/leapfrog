@@ -72,7 +72,7 @@ nav a {
     border-radius: 30px;
     text-align: center;
     cursor: pointer;
-    display: inline-block;
+    float: left;
 }
 .btn-learn-more a {
     text-decoration: none;
@@ -93,8 +93,8 @@ nav a {
     border-radius: 30px;
     text-align: center;
     cursor: pointer;
-    display: inline-block;
     margin-left: 40px;
+    float: left;
 }
 .btn-ticket-2 a {
     text-decoration: none;
@@ -136,7 +136,7 @@ nav a {
     border-radius: 30px;
     text-align: center;
     cursor: pointer;
-    display: inline-block;
+    float: left;
 }
 .btn-default a {
     text-decoration: none;
@@ -162,6 +162,7 @@ nav a {
     text-align: center;
     height: 150px;
     padding-top: 60px;
+    padding-left: 175px;
 }
 .fourth-title {
     font-family: 'Playfair Display', serif;
@@ -172,11 +173,11 @@ nav a {
     padding-top: 124px;
 }
 .gallery-profile {
-    display: inline-block;
     width: 370px;
     height: 477px;
     position: relative;
     margin: 15px;
+    float: left;
 }
 .gallery-name {
     font-family: 'Playfair Display', serif;
@@ -230,6 +231,7 @@ nav a {
 .fourth-gallery {
     margin-top: 30px;
     padding-bottom: 60px;
+    padding-left: 130px;
 }
 .sixth-header {
     text-align: center;
@@ -250,20 +252,20 @@ nav a {
 }
 .event-day-wrapper {
     text-align: center;
-    padding: 48px 0 0 0;
+    padding: 48px 0 0 425px;
 }
 .event-day {
-    display: inline-block;
     padding: 0 40px;
     border-right: 1px solid rgba(233, 233, 233, 1 );
     padding-bottom: 8px;
     margin-bottom: 30px;
+    float: left;
 }
 .event-day a {
     text-decoration: none;
     color: black;
 }
-.event-day a:active {
+.event-day a:hover {
     color: rgba(240, 71, 74, 1);
 }
 .day-no {
@@ -285,7 +287,7 @@ nav a {
     margin-bottom: 50px;
 }
 .auditorium-1, .hall-a1, .auditorium-2  {
-    display: inline-block;
+    float: left;
 }
 .auditorium {
     background-color: rgb(243, 243, 243);
@@ -301,7 +303,7 @@ nav a {
     color: rgba(28, 29, 29, 0.702);
     font-weight: bold;
 }
-.auditorium a:active {
+.auditorium a:hover {
     color: rgba(28, 29, 29,1);
 }
 .auditorium span {
@@ -352,7 +354,8 @@ nav a {
     font-family: "Poppins", sans-serif;
     padding: 30px 0 35px 0;  
     max-width: 590px;  
-    display: none;
+    /* display: none; */
+    display: block;
 }
 .seventh-title {
     font-size: 40px;
@@ -376,8 +379,8 @@ nav a {
 }
 .comment-wrapper {
     position: relative;
-    display: inline-block;
     margin: 0 25px;
+    float: left;
 }
 .comment-box {
    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07); 
@@ -506,15 +509,15 @@ nav a {
     font-family: "Playfair Display", serif;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    display: inline-block;    
+    float: left;
 }
 .input-wrapper {
-    display: inline-block;
     border: 1px solid white;
     height: 60px;
     border-radius: 30px;
     text-align: center;
     margin-left: 40px;
+    float: left;
 }
 .input-wrapper input {
     background: none;
@@ -542,13 +545,13 @@ nav a {
     text-align: center;
 } 
 .thirteenth-col-wrapper {
-    padding: 110px 0;
+    padding: 110px 0 110px 155px;
 }
 .thirteenth-row-wrapper {
     text-align: center;
 }
 .thirteenth-col1, .thirteenth-col3 {
-    display: inline-block;
+    float: left;
     width: 415px;
 }
 .thirteenth-col1-title {
@@ -579,7 +582,7 @@ nav a {
     padding: 0 0 0 0;
 }
 .thirteenth-col2 {
-    display: inline-block;
+    float: left;
     width: 170px;
     padding: 0 100px;
 }
@@ -620,5 +623,57 @@ nav a {
 .footer-text span {
     text-decoration: underline;
 }
+/* fix for float left */
+.header-btn-wrapper {
+    padding-left: 400px;
+}
+.second-btn-wrapper {
+    padding-left: 500px;
+}
+.seventh-gallery {
+    padding-left: 135px;
+}
+.comments-wrapper {
+    padding-left: 200px;
+    padding-top: 70px;
+}
+.ninth-counter-wrapper {
+    padding-left: 350px;
+}
+.ninth-btn-wrapper {
+    padding-left: 500px;
+}
+.gallery-image {
+    float: left;
+    padding: 10px 10px;
+}
+.twelvth-row-contents {
+    padding-left: 625px;
+}
 
-
+/* fix end */
+nav a:hover {
+    color: rgba(253, 175, 25, 1);
+}
+.btn-ticket:hover {
+    color: rgba(253, 175, 25, 1);
+    border-color:rgba(253, 175, 25, 1);
+}
+.btn-ticket:hover span {
+    color: rgba(253, 175, 25, 1);
+}
+.btn-learn-more:hover span{
+    color: rgba(253, 175, 25, 1);
+}
+.btn-learn-more:hover {
+    border-color:rgba(253, 175, 25, 1);
+}
+.btn-ticket-2:hover a{
+    color: white;
+}
+.btn-attend:hover {
+    background-color: rgba(240, 71, 74, 1); 
+}
+.btn-attend:hover span {
+    color: white;
+}
