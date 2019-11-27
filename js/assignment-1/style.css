@@ -1,0 +1,59 @@
+.image-carousel {
+    width: 300px;
+    height: 200px;
+    overflow: hidden; 
+    position: relative;
+    margin: 50px auto;
+}
+.image-wrapper {
+    position: absolute;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+img {
+   
+    display: block;
+    float: left;
+}
+.arrow-wrapper img {
+    height: 40px;
+    width: 40px;
+    opacity: 0.7;
+}
+.arrow-wrapper img:hover {
+    opacity: 1;
+}
+.left-arrow {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    cursor: pointer;
+}
+.right-arrow {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    cursor: pointer;
+}
+
+.dot-wrapper {
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    width: 100%;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: black;
+}

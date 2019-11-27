@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        var fruits = [
+            { id: 1, name: 'Banana', color: 'Yellow' },
+            { id: 2, name: 'Apple', color: 'Red' },
+            { id: 3, name: 'Mango', color: 'Yellow' },
+            { id: 4, name: 'Watermelon', color: 'Green' },
+            { id: 5, name: 'Strawberry', color: 'Red' }
+        ]
+
+        function searchByName(fruits, searchName) {
+            for (var i = 0; i <= fruits.length; i++) {
+                if (searchName === fruits[i].name) {
+                    console.log(fruits[i]);
+                }
+            }
+        }
+
+        searchByName(fruits,"Strawberry");
+
+    </script>
+
+</body>
+
+</html>
