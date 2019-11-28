@@ -2,7 +2,10 @@
   function Box(parentElement) {
     this.x = 10;
     this.y = 10;
-    this.speed = 2;
+    this.speedX = getRandomArbitrary(1, 2);
+    this.speedY = getRandomArbitrary(1, 2);
+    this.dX = getRandomArbitrary(1, 5);
+    this.dY = getRandomArbitrary(1, 5);
     this.width = 20;
     this.height = 20;
     this.element = null;
@@ -39,19 +42,24 @@
     }
 
     this.move = function () {
-      if (this.x < 0 || this.x > 480 || this.y < 0 || this.y > 480) { // condition for outer boundary
-        this.speed = - this.speed;
+      if (this.x < 0 || this.x > 480) { // condition for outer boundary
+        this.dX = -this.dX;
       }
-      this.x += this.speed;
-      this.y += this.speed;
+      if (this.y < 0 || this.y > 480) {
+        this.dY = - this.dY;
+      }
+      this.x += (this.dX * this.speedX);
+      this.y += (this.dY * this.speedY);
       this.draw();
     }
 
     this.checkCollision = function (boxes) {
       for (var i = 0; i < boxes.length; i++) {
         if (this.x <= (boxes[i].x + boxes[i].width) && (this.x + this.width) >= boxes[i].x && this.y <= (boxes[i].y + boxes[i].height) && (this.y + this.height) >= boxes[i].y) {
-          this.speed = -this.speed;
-          boxes[i].speed = -boxes[i].speed;
+          this.dX = -this.dX;
+          this.dY = - this.dY;
+          boxes[i].dX = -boxes[i].dX;
+          boxes[i].dY = -boxes[i].dY;
         }
       }
       return false;
