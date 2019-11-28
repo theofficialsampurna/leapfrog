@@ -17,8 +17,8 @@
       box.classList.add('box');
       this.parentElement.appendChild(box);
       this.element = box;
-      this.element.onClick = this.boxClicked.bind(this);
-      box.addEventListener('click', this.boxClicked.bind(this));
+      // this.element.onClick = this.boxClicked.bind(this);
+      this.element.addEventListener('click', this.boxClicked.bind(this));
       this.draw();
       return this;
     }
