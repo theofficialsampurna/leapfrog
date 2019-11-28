@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.app {
+    height: 500px;
+    width: 500px;
+    background: #dfdfdf;
+    position: relative;
+    border: 5px solid green;
+  }
+  
+  .box {
+    background: red;
+    position: absolute;
+  }
