@@ -30,10 +30,18 @@ function roadFighter(parentElement) {
   var startButton = document.createElement('div');
   var restartButton = document.createElement('div');
   var highestScore = 0;
+  var bullet = new Bullet();
+  var bulletFired = 'false';
+  var bulletY = 0;
+  var bulletCollisionStatus = 'false';
 
   this.gameInit = function () {
     this.createAll();
+    this.checkHighScore();
+  }
 
+  this.checkHighScore = function () {
+    highestScore = window.localStorage.getItem('highestScore');
   }
 
   this.createAll = function () {
@@ -117,9 +125,12 @@ function roadFighter(parentElement) {
     restartButton.addEventListener('click', restartGame);
 
     mainCar.init();
+
     for (var i = 0; i <= (obstaclesNo - 1); i++) {
       generateObstacle(i);
     }
+
+    bullet.init();
 
   }
 
@@ -129,7 +140,7 @@ function roadFighter(parentElement) {
     startButton.style.display = 'none';
   }
 
-  function restartGame () {
+  function restartGame() {
     window.location.reload();
   }
 
@@ -192,6 +203,8 @@ function roadFighter(parentElement) {
     moveObstacles();
     checkCollision();
     previewScore();
+    checkBulletStatus();
+    checkBulletCollision();
 
     request = window.requestAnimationFrame(draw);
   }
@@ -207,7 +220,7 @@ function roadFighter(parentElement) {
 
   function previewScore() {
     scoreBoard.innerHTML = ('Score: ' + score);
-    // highScore.innerHTML = ('High Score: ' + highestScore);
+    highScore.innerHTML = ('High Score: ' + highestScore);
   }
 
   function moveObstacles() {
@@ -219,10 +232,6 @@ function roadFighter(parentElement) {
         obstacles[k].remove();
         obstacles.splice(k, 1);
         score += 1;
-        if (score > highestScore) {
-          window.localStorage.setItem('highestScore', score);
-          highestScore = window.localStorage.getItem('highestScore');
-        }
         generateObstacle(k);
       }
 
@@ -236,6 +245,61 @@ function roadFighter(parentElement) {
       obstacles = [];
       window.cancelAnimationFrame(request);
       restartButton.style.display = 'block';
+      if (score > highestScore) {
+        window.localStorage.setItem('highestScore', score);
+      }
+    }
+  }
+
+  function checkBulletStatus() {
+    if (bulletFired == 'false') {
+      bullet.setPosition(mainCar.x, mainCar.y);
+      bullet.drawBullet();
+    }
+    else {
+      bulletY = bullet.fire();
+      bullet.drawBullet();
+    }
+
+    if (bulletY < 0) {
+      bullet.remove();
+      bulletFired = 'false';
+      bulletY = 0;
+      bullet = new Bullet();
+      bullet.init();
+    }
+
+  }
+
+  window.addEventListener("keydown", function (event) {
+    var key = event.keyCode;
+    switch (key) {
+      case 38:
+      case 32: {
+        bulletFired = 'true';
+        break;
+      }
+      default:
+      // console.log('Press up or space');
+    }
+  });
+
+  function checkBulletCollision() {
+    if (bulletFired == 'true') {
+      bulletCollisionStatus = bullet.checkCollision(obstacles);
+    }
+    if (bulletCollisionStatus != 'false') {
+      // console.log('bullet collided');
+      console.log(bulletCollisionStatus);
+      obstacles[bulletCollisionStatus].remove();
+      obstacles.splice(bulletCollisionStatus, 1);
+      generateObstacle(bulletCollisionStatus);
+      bullet.remove();
+      bulletFired = 'false';
+      bulletY = 0;
+      bullet = new Bullet();
+      bullet.init();
+      checkBulletStatus();
     }
   }
 
@@ -281,7 +345,7 @@ function roadFighter(parentElement) {
           break;
         }
         default:
-          console.log('Press a or d');
+        // console.log('Press a or d');
       }
       if (that.x > posLane3) {
         that.x = posLane3;
@@ -364,5 +428,60 @@ function roadFighter(parentElement) {
 
   }
 
+  //--------------------------------------Bullet object
+  function Bullet() {
+    this.x = 225;
+    this.y = 400;
+    this.height = 30;
+    this.width = 10;
+    this.speedBullet = 5;
+
+    this.elementBullet;
+
+    this.init = function () {
+      this.elementBullet = document.createElement('div');
+      this.elementBullet.style.height = this.height + 'px';
+      this.elementBullet.style.width = this.width + 'px';
+      this.elementBullet.classList.add('bullet');
+      this.elementBullet.style.position = 'absolute';
+      this.elementBullet.style.display = 'none';
+      this.elementBullet.style.zIndex = '50';
+      this.elementBullet.style.backgroundColor = 'red';
+      parentElement.appendChild(this.elementBullet);
+    }
+
+    this.setPosition = function (x, y) {
+      this.y = y + 10;
+      this.x = x + 15;
+    }
+
+    this.drawBullet = function () {
+      this.elementBullet.style.left = this.x + 'px';
+      this.elementBullet.style.top = this.y + 'px';
+    }
+
+    this.fire = function () {
+      this.elementBullet.style.display = 'block';
+      this.y -= this.speedBullet;
+      return this.y;
+    }
+
+    this.remove = function () {
+      parentElement.removeChild(this.elementBullet);
+    }
+
+    this.checkCollision = function (obstaclesArray) {
+      for (var j = 0; j <= (obstaclesArray.length - 1); j++) {
+        if (this.x <= (obstaclesArray[j].x + obstaclesArray[j].width) && (this.x + this.width) >= obstaclesArray[j].x && this.y <= (obstaclesArray[j].y + obstaclesArray[j].height) && (this.y + this.height) >= obstaclesArray[j].y) {
+          return j;
+        }
+        else {
+          var bCollided = 'false';
+        }
+      }
+      return bCollided;
+    }
+
+  }
 }
 
