@@ -10,8 +10,6 @@ function roadFighter(parentElement) {
   var x = 0;
   var y = 0;
   var speed = 2;
-  var dx = 0;
-  var dy = 1;
   var parentElement = parentElement;
   var gameWrapper = document.createElement('div');
   var posLane1 = 140;
@@ -25,9 +23,13 @@ function roadFighter(parentElement) {
   var gameOver = document.createElement('div');
   var scoreBoard = document.createElement('div');
   var score = 0;
-  var scoreText;
-  this.request = 0;
+  var request;
   var scoreBoard = document.createElement('div');
+  var highScore = document.createElement('div');
+  var gameTitle = document.createElement('div');
+  var startButton = document.createElement('div');
+  var restartButton = document.createElement('div');
+  var highestScore = 0;
 
   this.gameInit = function () {
     this.createAll();
@@ -54,12 +56,11 @@ function roadFighter(parentElement) {
 
     gameOver.style.background = "url('images/gameover.jpg')";
     gameOver.style.backgroundRepeat = 'no-repeat';
-    // gameOver.style.backgroundSize = 'c';
     gameOver.style.position = 'absolute';
     gameOver.style.display = 'none';
     gameOver.style.zIndex = '100';
     gameOver.style.opacity = '0.9';
-    gameOver.style.width = 480 + 'px';
+    gameOver.style.width = MAX_WIDTH + 'px';
     gameOver.style.height = MAX_HEIGHT + 'px';
     parentElement.appendChild(gameOver);
 
@@ -70,12 +71,66 @@ function roadFighter(parentElement) {
     scoreBoard.style.color = 'white';
     parentElement.appendChild(scoreBoard);
 
+    highScore.style.position = 'absolute';
+    highScore.style.zIndex = '100';
+    highScore.style.left = 470 + 'px';
+    highScore.style.top = 100 + 'px';
+    highScore.style.color = 'white';
+    parentElement.appendChild(highScore);
+
+    gameTitle.innerHTML = ('ROAD FIGHTER');
+    gameTitle.style.fontWeight = 'bold';
+    gameTitle.style.color = 'red';
+    gameTitle.style.fontSize = 36 + 'px';
+    gameTitle.style.textAlign = 'center';
+    gameTitle.style.position = 'absolute';
+    gameTitle.style.left = 75 + 'px';
+    gameTitle.style.top = 200 + 'px';
+    parentElement.appendChild(gameTitle);
+
+    startButton.innerHTML = ('START');
+    startButton.style.fontSize = 30 + 'px';
+    startButton.style.color = 'red';
+    startButton.style.fontWeight = 'bold';
+    startButton.style.textAlign = 'center';
+    startButton.style.textDecoration = 'underline';
+    startButton.style.cursor = 'pointer';
+    startButton.style.position = 'absolute';
+    startButton.style.left = 175 + 'px';
+    startButton.style.top = 300 + 'px';
+    parentElement.appendChild(startButton);
+    startButton.addEventListener('click', startGame);
+
+    restartButton.innerHTML = ('RESTART');
+    restartButton.style.fontSize = 30 + 'px';
+    restartButton.style.color = 'red';
+    restartButton.style.fontWeight = 'bold';
+    restartButton.style.textAlign = 'center';
+    restartButton.style.textDecoration = 'underline';
+    restartButton.style.cursor = 'pointer';
+    restartButton.style.position = 'absolute';
+    restartButton.style.left = 175 + 'px';
+    restartButton.style.top = 333 + 'px';
+    restartButton.style.zIndex = 100;
+    restartButton.style.display = 'none';
+    parentElement.appendChild(restartButton);
+    restartButton.addEventListener('click', restartGame);
 
     mainCar.init();
     for (var i = 0; i <= (obstaclesNo - 1); i++) {
       generateObstacle(i);
     }
 
+  }
+
+  function startGame() {
+    request = window.requestAnimationFrame(draw);
+    gameTitle.style.display = 'none';
+    startButton.style.display = 'none';
+  }
+
+  function restartGame () {
+    window.location.reload();
   }
 
   function generateObstacle(index) {
@@ -138,10 +193,8 @@ function roadFighter(parentElement) {
     checkCollision();
     previewScore();
 
-    this.request = window.requestAnimationFrame(draw);
+    request = window.requestAnimationFrame(draw);
   }
-  this.request = window.requestAnimationFrame(draw);
-
   //----------------------------------------------gameloop end 
 
   function moveBg() {
@@ -154,6 +207,7 @@ function roadFighter(parentElement) {
 
   function previewScore() {
     scoreBoard.innerHTML = ('Score: ' + score);
+    // highScore.innerHTML = ('High Score: ' + highestScore);
   }
 
   function moveObstacles() {
@@ -165,6 +219,10 @@ function roadFighter(parentElement) {
         obstacles[k].remove();
         obstacles.splice(k, 1);
         score += 1;
+        if (score > highestScore) {
+          window.localStorage.setItem('highestScore', score);
+          highestScore = window.localStorage.getItem('highestScore');
+        }
         generateObstacle(k);
       }
 
@@ -176,7 +234,8 @@ function roadFighter(parentElement) {
     if (collisionState == 'true') {
       gameOver.style.display = 'block';
       obstacles = [];
-      window.cancelAnimationFrame(this.request);
+      window.cancelAnimationFrame(request);
+      restartButton.style.display = 'block';
     }
   }
 
@@ -235,6 +294,7 @@ function roadFighter(parentElement) {
     }
 
     this.checkCollision = function (enemy) {
+      this.element.style.display = 'block';
       for (var i = 0; i < enemy.length; i++) {
         if (this.x <= (enemy[i].x + enemy[i].width) && (this.x + this.width) >= enemy[i].x && this.y <= (enemy[i].y + enemy[i].height) && (this.y + this.height) >= enemy[i].y) {
           console.log('collision!!!');
