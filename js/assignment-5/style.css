@@ -1,0 +1,12 @@
+.overflow {
+  width: 100%;
+}
+
+.app {
+  height: 500px;
+  width: 512px;
+  background: url('images/background.png');
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
