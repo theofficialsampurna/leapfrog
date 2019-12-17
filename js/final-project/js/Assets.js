@@ -12,6 +12,8 @@ function Assets() {
   this.init = function () {
     this.loadImage('player', './images/player.png');
     this.loadImage('hammer', './images/hammer.png');
+    this.loadImage('base', './images/base.png');
+    this.loadImage('hammer-reverse','./images/hammer-reverse.png');
 
 
 
