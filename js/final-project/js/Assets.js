@@ -1,4 +1,5 @@
 var assets;
+var TILE_SIZE = 10;
 
 function Assets() {
   var canvas = document.getElementById('canvas');
@@ -14,9 +15,8 @@ function Assets() {
     this.loadImage('hammer', './images/hammer.png');
     this.loadImage('base', './images/base.png');
     this.loadImage('hammer-reverse','./images/hammer-reverse.png');
-
-
-
+    this.loadImage('map','./images/bg1.png');
+    this.loadImage('map2','./images/bg2.png');
 
     this.loadInterval = setInterval(function () {
       clearInterval(that.loadInterval);

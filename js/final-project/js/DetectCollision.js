@@ -1,31 +1,37 @@
-function DetectCollision(ctx) {
+function DetectCollision(ctx, map) {
   var that = this;
   this.ctx = ctx;
+  this.map = map;
 
-  this.hammerBaseCollision = function (hammerProperty, baseProperty) {
-    // if ((player.property.canvasX + player.hammerProperty.x) <= (baseProperty.x + baseProperty.width) && (player.property.canvasX + player.hammerProperty.x + player.hammerProperty.width) >= baseProperty.x && (player.property.canvasY + player.hammerProperty.y) <= (baseProperty.y + baseProperty.height) && (player.property.canvasY + player.hammerProperty.y + player.hammerProperty.height) >= baseProperty.y) {
-    //   console.log('collision: hammer with base !!!');
-    // }
-    if (hammerProperty.endY >= baseProperty.y) {
-      console.log('collision: hammer with base !!!');
-      return true;
+  this.hammerBaseCollision = function (hammerProperty) {
+    var tileX = Math.round(hammerProperty.endX / TILE_SIZE);
+    var tileY = Math.round((hammerProperty.endY + 800) / TILE_SIZE);
+    // console.log(tileX, tileY);
+    for (var row = 0; row < that.map.totalTileRow; row++) {
+      for (var col = 0; col < that.map.totalTileColumn; col++) {
+        if (that.map.mapArray[tileY][tileX] === 1) {
+          console.log('hammer collided!!!');
+          return true;
+        }
+      }
     }
     return false;
   }
 
-  this.playerBaseCollision = function (playerProperty, baseProperty) {
-    if ((playerProperty.y + playerProperty.playerHeight) >= baseProperty.y) {
-      console.log('collision: player with base !!!');
-      return true;
+  this.playerBaseCollision = function (playerProperty) {
+    var playerTileX = Math.round(playerProperty.bottom.x / TILE_SIZE);
+    var playerTileY = Math.round((playerProperty.bottom.y + 800) / TILE_SIZE);
+
+    for (var row = 0; row < that.map.totalTileRow; row++) {
+      for (var col = 0; col < that.map.totalTileColumn; col++) {
+        // console.log(playerTileX, playerTileY);
+        if (that.map.mapArray[playerTileY][playerTileX] === 1) {
+          console.log('player bottom collided!!!');
+          return true;
+        }
+      }
     }
     return false;
   }
 
-  this.hammer2Collision = function (player, baseProperty) {
-    if (player.angle >= 2.35 || player.angle <= 0.79) {
-      console.log('collision: hammer2 with base !!!');
-      return true;
-    }
-    return false;
-  }
 }
