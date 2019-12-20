@@ -17,6 +17,7 @@ function Assets() {
     this.loadImage('hammer-reverse','./images/hammer-reverse.png');
     this.loadImage('map','./images/bg1.png');
     this.loadImage('map2','./images/bg2.png');
+    this.loadImage('congrats','./images/congrats.png');
 
     this.loadInterval = setInterval(function () {
       clearInterval(that.loadInterval);
