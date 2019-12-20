@@ -66,9 +66,9 @@ function Game(assets) {
         endX: 185,
         endY: 630
       },
-      map: {
-        x: 0,
-        y: -800
+      hands: {
+        x: 140,
+        y: 620
       }
     }
 
@@ -201,9 +201,9 @@ function Game(assets) {
         endX: that.player.hammerCollisionProperty.endX,
         endY: that.player.hammerCollisionProperty.endY
       },
-      map: {
-        x: that.map.mapProperty.x,
-        y: that.map.mapProperty.y
+      hands: {
+        x: that.player.handsProperty.x,
+        y: that.player.handsProperty.y
       }
     }
 
@@ -245,21 +245,21 @@ function Game(assets) {
 
   this.cameraLeft = function () {
     // if (that.map.mapProperty.x < 4000) {
-    that.map.mapProperty.x -= 5;
-    that.player.property.x -= 5;
-    that.player.hammerProperty.x -= 5;
-    that.player.hammerCollisionProperty.endX -= 5;
-    mapOffset.x += 5;
+    that.map.mapProperty.x -= 10;
+    that.player.property.x -= 10;
+    that.player.hammerProperty.x -= 10;
+    that.player.hammerCollisionProperty.endX -= 10;
+    mapOffset.x += 10;
     // }
   }
 
   this.cameraRight = function () {
     if (that.map.mapProperty.x < 0) {
-      that.map.mapProperty.x += 5;
-      that.player.property.x += 5;
-      that.player.hammerProperty.x += 5;
-      that.player.hammerCollisionProperty.endX += 5;
-      mapOffset.x -= 5;
+      that.map.mapProperty.x += 10;
+      that.player.property.x += 10;
+      that.player.hammerProperty.x += 10;
+      that.player.hammerCollisionProperty.endX += 10;
+      mapOffset.x -= 10;
     }
   }
 
@@ -281,8 +281,8 @@ function Game(assets) {
     mapOffset.y -= 5;
   }
 
-  this.reloadGame = function (){
-    if(gameOver){
+  this.reloadGame = function () {
+    if (gameOver) {
       window.location.reload();
     }
   }

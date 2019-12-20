@@ -1,8 +1,9 @@
-function Player(ctx, assets ) {
+function Player(ctx, assets) {
   var that = this;
   this.ctx = ctx;
   this.assets = assets;
   this.property = {};
+  this.handsProperty = {};
   this.hammerProperty = {};
   this.hammerCollisionProperty = {};
   this.angle = 0;
@@ -18,7 +19,7 @@ function Player(ctx, assets ) {
   this.jumpDist = 5;
   this.gravity = 1;
   this.speed = 2;
- 
+
   this.movementFlag = false;
   this.initialHammerCollision = false;
   this.initialPlayerCollision = false;
@@ -63,10 +64,16 @@ function Player(ctx, assets ) {
       endX: 185,
       endY: 630
     }
+    that.handsProperty = {
+      width: 70,
+      height: 56,
+      x: 140,
+      y: 620
+    }
     that.playerImage = that.ctx.createPattern(that.assets.getImage('player'), 'no-repeat');
     that.hammerImage = that.ctx.createPattern(that.assets.getImage('hammer'), 'no-repeat');
     that.hammerReverse = that.ctx.createPattern(that.assets.getImage('hammer-reverse'), 'no-repeat');
-
+    that.hands = that.ctx.createPattern(that.assets.getImage('hands'), 'no-repeat');
   }
 
   this.drawPlayer = function () {
@@ -79,7 +86,19 @@ function Player(ctx, assets ) {
     that.ctx.closePath();
     that.ctx.restore();
 
+    this.drawHands();
     this.moveHammer();
+  }
+
+  this.drawHands = function () {
+    that.ctx.save();
+    that.ctx.beginPath();
+    that.ctx.translate(gameState.hands.x, gameState.hands.y);
+    that.ctx.rect(0, 0, that.handsProperty.width, that.handsProperty.height);
+    that.ctx.fillStyle = that.hands;
+    that.ctx.fill();
+    that.ctx.closePath();
+    that.ctx.restore();
   }
 
   this.moveHammer = function () {
@@ -122,7 +141,9 @@ function Player(ctx, assets ) {
     this.getHammerInitialpoints();
     that.property.x = that.hammerCollisionProperty.endX - 45;
     that.property.y = that.hammerCollisionProperty.endY - 85;
-    camera.x = that.property.x;
+    that.handsProperty.x = that.property.x - 10;
+    that.handsProperty.y = that.property.y + 40;
+    // camera.x = that.property.x;
     this.updatePlayerCollisionPoints();
   }
 
