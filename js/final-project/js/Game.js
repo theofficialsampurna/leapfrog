@@ -249,6 +249,7 @@ function Game(assets) {
     that.player.property.x -= 10;
     that.player.hammerProperty.x -= 10;
     that.player.hammerCollisionProperty.endX -= 10;
+    that.player.handsProperty.x -= 10;
     mapOffset.x += 10;
     // }
   }
@@ -259,6 +260,7 @@ function Game(assets) {
       that.player.property.x += 10;
       that.player.hammerProperty.x += 10;
       that.player.hammerCollisionProperty.endX += 10;
+      that.player.handsProperty.x += 10;
       mapOffset.x -= 10;
     }
   }
